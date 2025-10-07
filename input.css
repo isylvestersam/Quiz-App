@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .darkTheme.bodyy{
+        @apply bg-[#313E51] bg-[url('images/pattern-background-mobile-dark.svg')] lg:bg-[url('images/pattern-background-desktop-dark.svg')] bg-no-repeat bg-fixed bg-cover bg-center
+    }
+    .darkTheme .all {
+        @apply text-white
+    }
+    .darkTheme .optionBar {
+        @apply bg-[#3C4C67]
+    }
+    .darkTheme .optionHighlight {
+        @apply hover:border-[#F3F7FD] 
+    }
+    .darkTheme .optionLetterBg {
+        @apply bg-[#F3F7FD]
+    }
+    .darkTheme .purple {
+        @apply bg-[#A529F5] text-white
+    }
+    .darkTheme .progressBar {
+        @apply bg-[#3D4D69]
+    }
+    .darkTheme .resultBar {
+        @apply bg-[#3C4C67]
+    }
+    .darkTheme .correct {
+        @apply border-[#26D782]
+    }
+    .darkTheme .incorrect {
+        @apply border-[#EE5555]
+    }
+
+
+
+    .lightTheme.bodyy{
+        @apply bg-[#FFFFFF] bg-[url('images/pattern-background-mobile-light.svg')] lg:bg-[url('images/pattern-background-desktop-light.svg')] bg-no-repeat bg-fixed bg-cover bg-center 
+    }
+    .all {
+        @apply text-black
+    }
+    .lightTheme .optionBar {
+        @apply bg-[#fcfdff]
+    }
+    .lightTheme .optionHighlight {
+        @apply hover:border-[#3D4D69] 
+    }
+    .lightTheme .optionLetterBg {
+        @apply bg-[#F3F7FD]
+    }
+    .lightTheme .purple {
+        @apply bg-[#A529F5] text-white
+    }
+    .lightTheme .progressBar {
+        @apply bg-[#FCFDFF]
+    }
+    .lightTheme .resultBar {
+        @apply bg-[#F3F7FD]
+    }
+    .lightTheme .correct {
+        @apply border-[#26D782]
+    }
+    .lightTheme .incorrect {
+        @apply border-[#EE5555]
+    }
+
+    .active {
+        @apply flex
+    }
+    .inactive {
+        @apply hidden
+    }
+}

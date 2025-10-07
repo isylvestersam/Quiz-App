@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Quiz Master</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body class=" darkTheme bodyy font-rubik lg:flex lg:flex-col lg:min-h-screen">
+
+    <div class="container px-6 pt-6 pb-12 mx-auto lg:mb-auto mt-7 lg:pb-20 lg:px-12 z-50">
+
+        <!-- HEADER SECTION -->
+        <header class="flex mb-12 w-full">
+
+            <!-- HTML -->
+            <div class="hidden hdr gap-4 items-center" >
+                <div class="w-fit p-1 bg-[#FFF1E9] rounded-md"><img src="images/icon-html.svg" alt="" class="w-7 "></div>
+                <h3 class="all text-lg ">HTML</h3>
+            </div>
+
+            <!-- CSS -->
+            <div class="hdr gap-4 items-center hidden">
+                <div class="w-fit p-1 bg-[#E0FDEF] rounded-md"><img src="images/icon-css.svg" alt="" class="w-7 "></div>
+                <h3 class="all text-lg ">CSS</h3>
+            </div>
+
+            <!-- Javascript -->
+            <div class="hdr gap-4 items-center hidden">
+                <div class="w-fit p-1 bg-[#EBF0FF] rounded-md"><img src="images/icon-js.svg" alt="" class="w-7 "></div>
+                <h3 class="all text-lg ">Javascript</h3>
+            </div>
+
+            <!-- Acessibility -->
+            <div class="hdr gap-4 items-center hidden">
+                <div class="w-fit p-1 bg-[#FCD8FF] rounded-md"><img src="images/icon-accessibility.svg" alt="" class="w-7 "></div>
+                <h3 class="all text-lg ">Accessibility</h3>
+            </div>
+
+            <!-- Sun Icons -->
+            <div class="flex gap-2 items-center ml-auto">
+                <img src="images/icon-sun-dark.svg" alt="" class="w-5">
+                <img src="images/icon-sun-light.svg" alt="" class="hidden w-5">
+
+                <!-- THEME SWITCHER -->
+                <label class="relative inline-flex items-center cursor-pointer h-6">
+                        <input type="checkbox" class="sr-only peer activeToggle" checked>
+                        <!-- Track -->
+                        <div class="w-[2.65rem] h-5 toggleBg bg-[#A729F7] rounded-full peer-checked:bg-[#A729F7] transition-colors duration-300"></div>
+                        <!-- Knob -->
+                        <div class="absolute top-[2px] left-[2px] w-[1.2rem] h-[1.2rem] bg-white rounded-full transition-transform duration-500 peer-checked:translate-x-5"></div>
+                </label>
+
+                <img src="images/icon-moon-dark.svg" alt="" class="w-5">
+                <img src="images/icon-moon-light.svg" alt="" class="hidden w-5">
+            </div>
+        </header>
+
+
+        <!-- WELCOME SCREEN -->
+        <section class="active flex-col lg:flex-row ">
+            <div class="lg:w-1/2 lg:mt-12">
+                <h3 class="all text-[2.7rem] font-light leading-[3.2rem] -mb-2 lg:text-[3.2rem]">Welcome to the</h3>
+                <h3 class="all text-[2.7rem] font-semibold lg:mb-12 lg:text-[3.7rem]">Frontend Quiz!</h3>
+                <p class="all italic font-light">Pick a subject to get started</p>
+            </div>
+
+            <div class="flex flex-col gap-3 mt-12 lg:w-1/2 lg:gap-4">
+                <!-- HTML -->
+                <button class="optionBar quizSelector flex rounded-lg py-4 border-2 border-transparent hover:cursor-pointer lg:hover:translate-x-7 hover:scale-[0.99] hover:border-[#A529F5] ease-out duration-1000 px-4">
+                    <input type="radio" name="" class="hidden " id="">
+                    <div class="flex gap-4 items-center" >
+                        <div class="w-fit p-1 bg-[#FFF1E9] rounded-md lg:p-3"><img src="images/icon-html.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">HTML</h3>
+                    </div>
+                </button>
+
+                <!-- CSS -->
+                <button class="optionBar quizSelector flex rounded-lg py-4 border-2 border-transparent hover:cursor-pointer lg:hover:translate-x-7  hover:scale-[0.99] hover:border-[#A529F5] ease-out duration-300 px-4">
+                    <input type="radio" name="" class="hidden " id="">
+                    <div class=" gap-4 items-center flex">
+                        <div class="w-fit p-1 bg-[#E0FDEF] rounded-md lg:p-3"><img src="images/icon-css.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">CSS</h3>
+                    </div>
+                </button>
+
+                <!-- Javascript -->
+                <button class="optionBar quizSelector flex rounded-lg py-4 border-2 border-transparent hover:cursor-pointer lg:hover:translate-x-7  hover:scale-[0.99] hover:border-[#A529F5] ease-out duration-300 px-4">
+                    <input type="radio" name="" class="hidden " id="">
+                    <div class=" gap-4 items-center flex">
+                        <div class="w-fit p-1 bg-[#EBF0FF] rounded-md lg:p-3"><img src="images/icon-js.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">Javascript</h3>
+                    </div>
+                </button>
+
+                <!-- Acessibility -->
+                <button class="optionBar quizSelector flex rounded-lg py-4 border-2 border-transparent hover:cursor-pointer lg:hover:translate-x-7  hover:scale-[0.99] hover:border-[#A529F5] ease-out duration-1000 px-4">
+                    <input type="radio" name="" class="hidden " id="">
+                    <div class=" gap-4 items-center flex">
+                        <div class="w-fit p-1 bg-[#FCD8FF] rounded-md lg:p-3"><img src="images/icon-accessibility.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">Accessibility</h3>
+                    </div>
+                </button>
+            </div>
+        </section>
+
+
+
+        <!-- QUESTION SECTION -->
+        <section class="lg:gap-32 inactive flex-col lg:flex-row ">
+            <div class="py-5 lg:w-1/2 lg:flex lg:flex-col lg:mt-12 lg:py-0">
+                <p class="all italic mb-3 lg:mb-5">Question <span class="questionNum">1</span> of <span class="questionLength">10</span></p>
+
+                <h3 class="all questionH3 text-2xl lg:text-[1.65rem]">
+                    Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?
+                </h3>
+
+
+                <!-- Progress Bar -->
+                <div class="progressBar flex items-center h-3 rounded-lg my-5 py-2 px-1 lg:mt-auto lg:mb-auto">
+                    <div class="bg-[#A529F5] progress ease-in-out duration-700 h-full rounded-lg py-1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-3 mt-12 lg:w-1/2 lg:gap-5">
+                <!-- OPTION A -->
+                <label class="optionBar options flex rounded-lg py-2 border-2 border-transparent hover:cursor-pointer hover:scale-[1.01] optionHighlight ease-out duration-1000 px-3">
+                    <input type="radio" name="option" class=" optionSelector" id="">
+                    <div class="flex gap-4 items-center" >
+                        <div class="w-fit px-4 py-2 optionLetterBg rounded-md">A</div>
+                        <h3 class="all text-lg optionText">2.5 : 1</h3>
+                    </div>
+
+                    <div class="ml-auto flex ">
+                        <img src="images/icon-correct.svg" alt="" class="hidden correctIcons shrink-0">
+                        <img src="images/icon-incorrect.svg" alt="" class="hidden incorrectIcons shrink-0">
+                    </div>
+                </label>
+
+                <!-- OPTION B -->
+                <label class="optionBar options flex rounded-lg py-2 border-2 border-transparent hover:cursor-pointer hover:scale-[1.01] optionHighlight ease-out duration-1000 px-3">
+                    <input type="radio" name="option" class=" optionSelector" id="">
+                    <div class=" gap-4 items-center flex">
+                        <div class="w-fit px-4 py-2 optionLetterBg rounded-md">B</div>
+                        <h3 class="all text-lg optionText">3 : 1</h3>
+                    </div>
+
+                    <div class="ml-auto flex ">
+                        <img src="images/icon-correct.svg" alt="" class="hidden correctIcons shrink-0">
+                        <img src="images/icon-incorrect.svg" alt="" class="hidden incorrectIcons shrink-0">
+                    </div>
+                </label>
+
+                
+
+                <!-- OPTION C -->
+                <label class="optionBar options flex rounded-lg py-2 border-2 border-transparent hover:cursor-pointer hover:scale-[1.01] optionHighlight ease-out duration-1000 px-3">
+                    <input type="radio" name="option" class=" optionSelector" id="">
+                    <div class=" gap-4 items-center flex">
+                        <div class="w-fit px-4 py-2 optionLetterBg rounded-md">C</div>
+                        <h3 class="all text-lg optionText">3 : 1</h3>
+                    </div>
+
+                    <div class="ml-auto flex ">
+                        <img src="images/icon-correct.svg" alt="" class="hidden correctIcons shrink-0">
+                        <img src="images/icon-incorrect.svg" alt="" class="hidden incorrectIcons shrink-0">
+                    </div>
+                </label>
+
+                <!-- OPTION D -->
+                <label class="optionBar options flex rounded-lg py-2 border-2 border-transparent hover:cursor-pointer hover:scale-[1.01] optionHighlight ease-out duration-300 px-3">
+                    <input type="radio" name="option" class="optionSelector " id="">
+                    <div class=" gap-4 items-center flex">
+                        <div class="w-fit px-4 py-2 optionLetterBg rounded-md">D</div>
+                        <h3 class="all text-lg optionText">5 : 1</h3>
+                    </div>
+
+                    <div class="ml-auto flex ">
+                        <img src="images/icon-correct.svg" alt="" class="hidden correctIcons shrink-0">
+                        <img src="images/icon-incorrect.svg" alt="" class="hidden incorrectIcons shrink-0">
+                    </div>
+                </label>
+
+                <button class="purple submitBtn py-3 rounded-md hover:font-semibold hover:underline hover:cursor-pointer hover:scale-[1.01] ease-out duration-300 hidden">Next Question</button>
+
+                <div class=" items-center mx-auto gap-2 hidden">
+                    <img src="images/icon-incorrect.svg" alt="">
+                    <p class="text-[#F14F51]">Please select an answer</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Completed Section -->
+        <section class="inactive flex-col mt-7 lg:flex-row lg:px-12  ">
+            <div class="lg:w-1/2">
+                <h3 class="all text text-[2.4rem] text-pretty font-light -mb-[0.3rem] lg:text-[3.2rem] lg:-mb-[0.3rem]">Quiz completed</h3>
+                <h3 class="all font-semibold text-[2.4rem] mb-7">You scored...</h3>
+            </div>
+
+            
+            <div class="lg:w-1/2">
+                <div class="flex flex-col justify-center items-center text-center resultBar gap-2 py-7 rounded-lg mb-3">
+                    <!-- HTML -->
+                    <div class="hidden gap-4 items-center resultHdr" >
+                        <div class="w-fit p-1 bg-[#FFF1E9] rounded-md"><img src="images/icon-html.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">HTML</h3>
+                    </div>
+
+                    <!-- CSS -->
+                    <div class=" gap-4 items-center hidden resultHdr">
+                        <div class="w-fit p-1 bg-[#E0FDEF] rounded-md"><img src="images/icon-css.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">CSS</h3>
+                    </div>
+
+                    <!-- Javascript -->
+                    <div class=" gap-4 items-center hidden resultHdr">
+                        <div class="w-fit p-1 bg-[#EBF0FF] rounded-md"><img src="images/icon-js.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">Javascript</h3>
+                    </div>
+
+                    <!-- Acessibility -->
+                    <div class=" gap-4 items-center hidden resultHdr">
+                        <div class="w-fit p-1 bg-[#FCD8FF] rounded-md"><img src="images/icon-accessibility.svg" alt="" class="w-7 "></div>
+                        <h3 class="all text-lg ">Accessibility</h3>
+                    </div>
+                    
+
+                    <h3 class="all scoreText text-[5rem] -my-4">8</h3>
+
+                    <p class="all">out of 10</p>
+                </div>
+
+                <button class="purple playAgain border border-transparent py-3 rounded-md hover:cursor-pointer hover:scale-[1.01] ease-out duration-300 w-full ">Play Again</button>
+            </div>
+        
+        </section>
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
