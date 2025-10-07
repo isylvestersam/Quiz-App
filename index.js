@@ -15,6 +15,7 @@ const optionText = document.querySelectorAll('.optionText');
 const hdr = document.querySelectorAll('.hdr');
 const correctIcons = document.querySelectorAll('.correctIcons');
 const incorrectIcons = document.querySelectorAll('.incorrectIcons');
+const optionLetterBg = document.querySelectorAll('.optionLetterBg');
 const resultHdr = document.querySelectorAll('.resultHdr');
 
 let currPage = 0;
@@ -194,6 +195,10 @@ const answerFunc = {
             icon.classList.add('hidden')
         })
         submitBtn.classList.add('hidden')
+        optionLetterBg.forEach((optionBg) => {
+            optionBg.classList.add('optionLetterBg')
+            optionBg.classList.remove('incorrectBg', 'correctBg')
+        })
         answered = false
     }
 } 
@@ -219,17 +224,23 @@ function setupOptionListeners() {
                 optionLabel[idx].classList.add('correct');
                 correctIcons[idx].classList.remove('hidden');
                 incorrectIcons[idx].classList.add('hidden');
+                optionLetterBg[idx].classList.add('correctBg')
+                optionLetterBg[idx].classList.remove('optionLetterBg')
                 submitBtn.classList.remove('hidden');
             } else {
                 optionLabel[idx].classList.add('incorrect');
                 incorrectIcons[idx].classList.remove('hidden');
                 submitBtn.classList.remove('hidden');
+                optionLetterBg[idx].classList.add('incorrectBg')
+                optionLetterBg[idx].classList.remove('optionLetterBg')
 
                     // Highlight correct one
                 globalCurrOptions.forEach((opt, i) => {
                     if (opt === correctAns) {
                         optionLabel[i].classList.add('correct');
                         correctIcons[i].classList.remove('hidden');
+                        optionLetterBg[i].classList.add('correctBg')
+                        optionLetterBg[i].classList.remove('optionLetterBg')
                     }
                 });
             }

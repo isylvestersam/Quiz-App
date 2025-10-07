@@ -33,6 +33,12 @@
     .darkTheme .incorrect {
         @apply border-[#EE5555]
     }
+    .darkTheme .correctBg {
+        @apply bg-[#26D782]
+    }
+    .darkTheme .incorrectBg {
+        @apply bg-[#EE5555]
+    }
 
 
 
@@ -66,6 +72,13 @@
     .lightTheme .incorrect {
         @apply border-[#EE5555]
     }
+    .lightTheme .correctBg {
+        @apply bg-[#26D782]
+    }
+    .lightTheme .incorrectBg {
+        @apply bg-[#EE5555]
+    }
+
 
     .active {
         @apply flex
